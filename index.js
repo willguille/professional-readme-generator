@@ -53,3 +53,10 @@ inquirer.prompt([
         return /\S+@\S+\.\S+/.test(input) ? true : 'Please enter a valid email address';
       }
 },
+
+]).then((answers) => {
+    const readmeContent = generateMarkdown(answers);
+    fs.writeFile('README.md', readmeContent, (err) =>
+      err ? console.error(err) : console.log('README.md generated!')
+    );
+});
