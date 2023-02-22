@@ -55,7 +55,7 @@ inquirer.prompt([
 },
 
 ]).then((answers) => {
-    const readmeContent = generateMarkdown(answers);
+    const readmeContent = generateReadme(answers);
     fs.writeFile('README.md', readmeContent, (err) =>
       err ? console.error(err) : console.log('README.md generated!')
     );
