@@ -1,4 +1,4 @@
-function generateMarkdown(data) {
+function generateReadme(data) {
     return `
   # ${data.title}
   
