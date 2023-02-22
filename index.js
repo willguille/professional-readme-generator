@@ -13,10 +13,30 @@ inquirer.prompt([
       message: 'Please provide a brief description of your project:',
     },
     {
+      type: 'input',
+      name: 'installation',
+      message: 'Please provide installation instructions for your project:',
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Please provide usage instructions for your project:',
+    },
+    {
       type: 'list',
       name: 'license',
       message: 'Choose a license for your project:',
       choices: ['MIT', 'Apache', 'GPL'],
+    },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: 'Please provide contribution guidelines for your project:',
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'Please provide instructions for running tests on your project:',
     },
     {
       type: 'input',
